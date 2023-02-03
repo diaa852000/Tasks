@@ -1,0 +1,24 @@
+﻿<div class="clock-container">
+    <div class="clock">
+        
+        <div class="h" style="z-index:5; transform:rotate(@(_hour)deg"><i></i></div>
+        <div class="m" style="transform:rotate(@(_min)deg)"><i></i></div>
+        <div class="s" style=" z-index:2; transform:rotate(@(_sec)deg)"><i></i></div>
+
+        <div class="h-circle"></div>
+        <div class="min-circle"></div>
+        <div class="sec-circle"></div>
+
+        @for(int i = 0, numAngle = 0, clockNum = 0; i < 12; i++, numAngle++, clockNum++)
+        {
+            <span style="--i:@(numAngle + 1);" class="hours"><b>@(clockNum + 1)</b></span>
+        }
+        
+
+        @for (int i = 0, dotAngle = 0, dots = 0; i < 60; i++, dotAngle++, dots++)
+        {
+            <span style="--j:@(dotAngle + 1.1);" class="dots">.</span>
+        }
+
+    </div> 
+</div>

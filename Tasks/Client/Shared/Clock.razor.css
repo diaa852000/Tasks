@@ -1,0 +1,131 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*:root {
+    --cir-color: rgba(0, 0, 0, 0.4);
+    --sec-hand: rgba(0,0,0, 0.78);
+    --min-hand: #f7f7f7;
+    --hr-hand: #eb2f06;
+}*/
+
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2f3640;
+}
+
+.clock {
+    position: relative;
+    background-color: #c8d6e5;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid rgba(0,0,0,0.4);
+}
+
+.clock:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    background-color:#f7f7f7;
+    z-index:10;
+}
+
+.clock > span.dots {
+    position: absolute;
+    inset: 45px;
+    transform: rotate(calc(6deg * var(--j)));
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.clock > span.hours {
+    position: absolute;
+    inset: 10px;
+    transform: rotate(calc(30deg * var(--i)));
+    text-align: center;
+}
+
+.clock > span.hours > b {
+    font-size: 2rem;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+
+.sec-circle {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.min-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.h-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+ 
+}
+
+div.h i {
+    position: absolute;
+    width: 6px;
+    height: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    background-color: black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 100% 100% 6px 6px ;
+}
+
+div.m i {
+    position: absolute;
+    width: 6px;
+    height: 135px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-100%);
+    background-color: blue;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 100% 100% 6px 6px;
+}
+
+div.s i {
+    position: absolute;
+    width: 6px;
+    height: 135px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-85%);
+    background-color: red;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 100% 100% 6px 6px;
+    
+}
+
